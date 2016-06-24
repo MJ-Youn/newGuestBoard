@@ -1,5 +1,13 @@
 "use strict";
 
+$(".input_button").click(function() {
+	var email = $("#input_email");
+	var password = $("#input_password");
+	var contents = $(".input_contents");
+	
+	console.log(checkEmptyForm(email, password, contents));
+});
+
 $(".modify_button").click(function() {
 	var parent = $(this).parent();
 	var passwordForm = parent.find(".post_password");
@@ -18,6 +26,10 @@ $(".modify_button").click(function() {
 		finishModify(passwordForm, cancelButton, textArea);
 	});
 });
+
+function checkEmptyForm(email, password, contents) {
+	return email.val() !== "" && password.val() !== "" && contents.val() !== "";;
+}
 
 function startModify(passwordForm, cancelButton, textArea) {
 	textArea.addClass("modify_post_text");

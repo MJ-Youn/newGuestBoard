@@ -9,9 +9,9 @@
 		
 		<div class="main_container">
 			<form class="input_container">
-				<input class="input_form" type="email" placeholder="Enter the E-mail" />
-				<input class="input_form password" type="password" placeholder="Enter the Password" />
-				<input class="button posting_submit" type="submit" value="Posting" />
+				<input id="input_email" class="input_form" type="email" placeholder="Enter the E-mail" required/>
+				<input id="input_password" class="input_form" type="password" placeholder="Enter the Password" required/>
+				<input class="button input_button" type="submit" value="Posting" />
 				<textarea class="input_contents" rows="5" cols="100"></textarea>
 			</form>
 			<div class="post_container">
