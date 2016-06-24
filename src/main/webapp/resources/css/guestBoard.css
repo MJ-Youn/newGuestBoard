@@ -1,0 +1,147 @@
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {    
+	background: url('../img/background.jpg') center center no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    font-family: "Nanum Gothic", sans-serif !important;
+}
+
+.main_container {
+    position: absolute;
+    min-height: 500px;
+    width: 1000px;
+    left: 50%;
+    margin: 0 0 0 -500px;
+    background-color: rgba(255,255,255,0.7);
+    text-align: center;
+}
+
+.input_container {
+    width: 930px;
+    min-height: 150px;
+    background-color: rgba(178, 154, 133, 0.9);
+    margin: 20px 25px;
+    padding: 10px;
+}
+
+.input_form {
+    width: 230px;
+    height: 30px;
+    margin: 2px 0 2px 5px;
+    padding: 5px;
+    float: left;
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    display: inline-block;
+    float: right;
+    background-color: #68aaf0;
+    border: 1px solid #56a3d8;
+    border-radius: 2px;
+	font-weight: bold;
+    color: #FFF;
+}
+
+.cancel_button {
+	display: none;
+    background-color: #f06868;
+    border: 1px solid #d85656;
+    width: 70px;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+.input_contents {
+    width: calc(100% - 10px);
+    height: 100px;
+    margin: 5px;
+   	padding: 5px;
+    resize: none;
+	font-size: 20px;
+}
+
+.post_container {
+    width: 950px;
+    min-height: 200px;
+    margin: 25px;
+}
+
+.post {
+    width: 930px;
+    min-height: 100px;
+    background: white;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.post_email {
+    float: left;
+    margin: 7px 7px 7px 15px;
+    font-weight: 900;
+}
+
+.post_text {
+    width: calc(100% - 20px);
+    padding: 10px;
+    display: inline-block;
+    border: 0;
+    border-top: 3px dotted #af8e8e;
+    text-align: left;
+    overflow: hidden;
+}
+
+.modify_post_text {
+    border: 1px solid #68aaf0;
+}
+
+@media screen and (max-width: 1000px) {
+	.main_container {
+	    position: inherit;
+	    width: calc(100% + 16px);
+	    margin: -20px -8px -8px -8px;
+	    padding-top: 10px;
+	}
+	
+	.input_container, .post_container {
+		margin: 0;
+		width: calc(100% - 20px);
+	}
+	
+	.post {
+	    width: 100%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.input_form {
+		float: none;
+		display: block;
+		width: 72%;
+	}
+	
+	.posting_submit {
+		position: absolute;
+	    right: 10px;
+	    top: 10px;
+	    height: 56px;
+	}
+	
+	.post_password {
+	    display: inline-block;
+	    width: 31%;
+	    position: relative;
+	    right: -50px;
+	}
+}
